@@ -2,14 +2,7 @@ version: 3
 domain: technical digest
 created_by: ETX
 document_outline: |
-  In the Volume 37, Number 2 APL technical digest, it describes an effective
-  human–machine teaming systems are becoming critical to the success of the
-  modern warfighter. Johns Hopkins University Applied Physics Laboratory (APL)
-  researchers developed the Human–Machine Interfaces for Human–Machine Teaming
-  (H4H) architecture, a platform that simplifies this complex integration. By
-  modularizing components and simplifying interfaces, H4H aims to reduce the
-  overall cost to establish an initial prototype of a system while enabling
-  reuse of the system’s components.
+  This Volume 37 of Number 2 from Janunary 2024 paper introduces H4H, a modular framework for rapid human-machine teaming (HMT) prototype integration, addressing challenges like high costs and limited reuse in traditional systems. It is authored by Edgar F. Martinez, Rebecca M. Crockett, and Ian A. Grissom, researchers at Johns Hopkins University Applied Physics Laboratory (APL)
 seed_examples:
   - context: |
       APL develops and evaluates new human-machine teaming (HMT) technologies to augment the modern warfighter and to enable the United States to hold a competitive edge over current and future adversaries. HMT refers to collaboration between humans and complex technologies to achieve a specific goal, and it relies on three equally important elements: the human, the machine, and the interactions between them. Because HMT innovations are often a novel combination of existing technologies, components are frequently rapidly prototyped and integrated so that new ideas can be evaluated before too much time or money is invested in creating a final design. However, improvements to current HMT prototyping practices could lead to even more savings. In general, developing prototypes reduces costs because there is no concern with future modifications, extensions, or reuse when integrating components. Although this practice makes sense for most proof-of-concept efforts, HMT prototypes could benefit from these characteristics since many HMT concepts of operations share hardware and software components. Making these components modular and reusable could save costs across multiple prototyping efforts.
@@ -71,10 +64,10 @@ seed_examples:
           How does the use of adapter services improve system scalability and flexibility in integrating new hardware components?
         answer: |
           Adopter services is a softarwe that acts as an interface between an external component and internal data channel. Adapter services are therefore tightly coupled to their respective hardware but not to any other service. The use of publish-subscribe channels also adds the ability to seamlessly scale the system, meaning adapter services developed for different external hardware components.
-  - context: | 
+  - context: |
       HMT capabilities are expected to be deployed as a collection of services using Kubernetes resource files. For larger projects integrating multiple capabilities, resource files can become unwieldy. This is amplified in a highly modular HMT system where varying configurations of several or individual services are possible depending on the operational need. To streamline this process, H4H uses Helm, a Kubernetes package manager. Helm users create "chart" files that allow a collection of Kubernetes resources to be packaged together for easy deployment. Charts offer two key features: version tracking and templating. Version tracking enables capabilities to be incrementally versioned as changes are made, while templating enables users to supply a single "values" file containing deployment-specific settings to base templates of Kubernetes resource files. Templating is a key feature H4H uses to deploy applications across different systems. shows how Docker, Kubernetes, and Helm wrap an application. Each layer provides some abstraction or control over the layers beneath it.
     questions_and_answers:
-      - question: | 
+      - question: |
           How HMT capabilities are expected to be deployed.
         answer: |
           HMT capabilities are expected to be deployed as collection of servicing using kubernetes resource file.
@@ -82,10 +75,10 @@ seed_examples:
           Which package manager is used by HMT to streamline the deployment.
         answer: |
           HMT uses Helm package manager, helm is kubernetes package manager that simplifies deployment of complex applications on kubernetes platform.
-      - question: | 
+      - question: |
           What is the role of templating in the H4H?
         answer: |
-          Templating plays a key role in H4H, this enables H4H to deploy across different systems seamlessly. 
+          Templating plays a key role in H4H, this enables H4H to deploy across different systems seamlessly.
 document:
   repo: https://github.com/tsailiming/etx-ai-poc.git
   commit: 4171b73c57667c1536d540e6ccb1d4fc39daa3ea
