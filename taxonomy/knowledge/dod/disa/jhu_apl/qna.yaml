@@ -1,0 +1,78 @@
+version: 3
+domain: technical digest
+created_by: ETX
+document_outline: |
+  In the Volume 37, Number 2 APL technical digest, it describes an effective
+  human–machine teaming systems are becoming critical to the success of the
+  modern warfighter. Johns Hopkins University Applied Physics Laboratory (APL)
+  researchers developed the Human–Machine Interfaces for Human–Machine Teaming
+  (H4H) architecture, a platform that simplifies this complex integration. By
+  modularizing components and simplifying interfaces, H4H aims to reduce the
+  overall cost to establish an initial prototype of a system while enabling
+  reuse of the system’s components.
+seed_examples:
+  - context: |
+      APL develops and evaluates new human-machine teaming (HMT) technologies to augment the modern warfighter and to enable the United States to hold a competitive edge over current and future adversaries. HMT refers to collaboration between humans and complex technologies to achieve a specific goal, and it relies on three equally important elements: the human, the machine, and the interactions between them. Because HMT innovations are often a novel combination of existing technologies, components are frequently rapidly prototyped and integrated so that new ideas can be evaluated before too much time or money is invested in creating a final design. However, improvements to current HMT prototyping practices could lead to even more savings. In general, developing prototypes reduces costs because there is no concern with future modifications, extensions, or reuse when integrating components. Although this practice makes sense for most proof-of-concept efforts, HMT prototypes could benefit from these characteristics since many HMT concepts of operations share hardware and software components. Making these components modular and reusable could save costs across multiple prototyping efforts.
+    questions_and_answers:
+      - question: |
+          What does HMT stands for?
+        answer: |
+          HMT stands for human-machine teaming (HMT) technologies and refers as a colloabration between human and complex technologies.
+      - question: |
+          What are the elements for HMT?
+        answer: |
+          The elements for HMT incldues the human, the machine, and the interactions between them.
+      - question: |
+          What is HMT design and components within HNT?
+        answer: |
+          :HMT is an innovations are often a novel combination and compoennts are frequently update so that new ideas can be evaluated before too much time or money is invested.
+  - context: |
+      System architectures are categorized as open or closed. In a closed system architecture, components are predefined, and their interactions consist of proprietary protocols tailored to those specific components. Designing the interactions between specific components, however, usually leads to a tight coupling between components and makes the system hard to modify or extend. In contrast, open architectures are designed with consideration that existing components will possibly be replaced or new ones introduced in the future. Instead of using proprietary protocols and knowledge of the implementation details of other components, the interactions between an initial set of components in an open architecture will take place through abstract interfaces and standardized protocols. Designing interactions this way enables components to remain loosely coupled and modular. Since HMT technologies are constantly evolving, it is impossible to predefine all the desired components in an HMT system. Therefore, when considering rapid prototypes in the field of human-machine systems, it is essential to consider the use an open architecture to facilitate integration while maintaining modularity for future development.
+    questions_and_answers:
+      - question: |
+          What are the system architecture categorize ?
+        answer: |
+          There are two categories of system architecture: open architecture and closed architecture.
+      - question: |
+          Explain me what is the closed architecture?
+        answer: |
+          In closed architecture components are predefined and are proprietary, and their interactions consist of proprietary protocols.
+      - question: |
+          Explain me what is the open architecture?
+        answer: |
+          Open architectures are designed with consideration that existing components will possibly be replaced or new ones introduced in the future. The open architecture does not use proprietary protocols.
+  - context: |
+      H4H provides a framework that expedites the integration of HMT prototypes. Specifically, it uses a micro-services approach to separate components and provides methods for abstracting component interfaces. These features enable modularity. As a result, adding, upgrading, replacing, and reusing hardware and software components is more efficient. Although still in its early development stages, H4H has already shown promising results on an initial test bed integrating AR displays, UGVs, UAVs, gesture controllers, and more. The H4H team plans to continue refining the H4H framework and expanding its set of tools and features in further pursuit of the end goal of augmenting tomorrow's warfighter capabilities.
+    questions_and_answers:
+      - question: |
+          What are the main features of the H4H framework?
+        answer: |
+          A microservices approach to separate components and methods for abstracting component interfaces, enabling modularity and efficiency.
+      - question: |
+          How does the H4H framework improve the efficiency of hardware and software component integration?
+        answer: |
+          The separation of components and abstraction of interfaces allows for hardware and software components to be easily added, upgraded, replaced, and reused.
+      - question: |
+          What are the future plans for development of the H4H framework?
+        answer: |
+          The H4H team plans to continue refining the framework and expanding its set of tools and features.
+  - context: |
+      As an example, H4H is applied to the concept of operations of the warfighter with an AR headset and a UGV (Figure 1). An adapter service is created and deployed for each external hardware component (UGV and AR display). In this context, an adapter service is essentially software that acts as an interface between an external component and an internal data channel. Adapter services are therefore tightly coupled to their respective hardware but not to any other service. The threat detection service is also decoupled from all hardware. It consumes the data from the UGV adapter through the sensor data channel and provides the AR display service with data through the threat alert channel. As a result, if the UGV needed to be swapped for a UAV, then a UAV adapter would replace the UGV adapter and no other services would need to be modified. Similarly, if the AR display's vendor changed, then only the AR display adapter would need to be changed. This approach isolates the impact of changes to a single cohesive module, which simplifies the development and expedites the integration of a new component. The use of publish-subscribe channels also adds the ability to seamlessly scale the system, meaning adapter services developed for different external hardware components, such as two different AR displays, could be simultaneously deployed with significant ease. Ultimately, it provides prototyping teams with the ability to quickly test and evaluate alternatives or vendor products.
+    questions_and_answers:
+      - question: |
+          What is the H4H archiecture?
+        answer: |
+          The H4H architecture uses an adapter services using a software that acts as an interface between an external component and an internal data channel.
+      - question: |
+          How can this adapter service approach encourage vendor-agnostic solutions in hardware-software integration?
+        answer: |
+          The adapter service approach encourages vendor-agnostic solutions by isolating the integration of each hardware component into its own modular service. Since these adapter services are designed to interface with internal data channels rather than other services or hardware components.
+      - question: |
+          How does the use of adapter services improve system scalability and flexibility in integrating new hardware components?
+        answer: |
+          Adopter services is a softarwe that acts as an interface between an external component and internal data channel. Adapter services are therefore tightly coupled to their respective hardware but not to any other service. The use of publish-subscribe channels also adds the ability to seamlessly scale the system, meaning adapter services developed for different external hardware components.
+document:
+  repo: https://github.com/xxx/xxxx
+  commit: xxx
+  patterns:
+    - xxx.md
