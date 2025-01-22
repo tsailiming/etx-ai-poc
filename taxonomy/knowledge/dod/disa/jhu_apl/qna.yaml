@@ -72,7 +72,7 @@ seed_examples:
         answer: |
           Adopter services is a softarwe that acts as an interface between an external component and internal data channel. Adapter services are therefore tightly coupled to their respective hardware but not to any other service. The use of publish-subscribe channels also adds the ability to seamlessly scale the system, meaning adapter services developed for different external hardware components.
 document:
-  repo: https://github.com/xxx/xxxx
-  commit: xxx
+  repo: https://github.com/tsailiming/etx-ai-poc.git
+  commit: 4171b73c57667c1536d540e6ccb1d4fc39daa3ea
   patterns:
-    - xxx.md
+    - 'markdown/Article1/article_1.md'
