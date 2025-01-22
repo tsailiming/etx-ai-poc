@@ -71,6 +71,21 @@ seed_examples:
           How does the use of adapter services improve system scalability and flexibility in integrating new hardware components?
         answer: |
           Adopter services is a softarwe that acts as an interface between an external component and internal data channel. Adapter services are therefore tightly coupled to their respective hardware but not to any other service. The use of publish-subscribe channels also adds the ability to seamlessly scale the system, meaning adapter services developed for different external hardware components.
+  - context: | 
+      HMT capabilities are expected to be deployed as a collection of services using Kubernetes resource files. For larger projects integrating multiple capabilities, resource files can become unwieldy. This is amplified in a highly modular HMT system where varying configurations of several or individual services are possible depending on the operational need. To streamline this process, H4H uses Helm, a Kubernetes package manager. Helm users create "chart" files that allow a collection of Kubernetes resources to be packaged together for easy deployment. Charts offer two key features: version tracking and templating. Version tracking enables capabilities to be incrementally versioned as changes are made, while templating enables users to supply a single "values" file containing deployment-specific settings to base templates of Kubernetes resource files. Templating is a key feature H4H uses to deploy applications across different systems. shows how Docker, Kubernetes, and Helm wrap an application. Each layer provides some abstraction or control over the layers beneath it.
+    questions_and_answers:
+      - question: | 
+          How HMT capabilities are expected to be deployed.
+        answer: |
+          HMT capabilities are expected to be deployed as collection of servicing using kubernetes resource file.
+      - question: |
+          Which package manager is used by HMT to streamline the deployment.
+        answer: |
+          HMT uses Helm package manager, helm is kubernetes package manager that simplifies deployment of complex applications on kubernetes platform.
+      - question: | 
+          What is the role of templating in the H4H?
+        answer: |
+          Templating plays a key role in H4H, this enables H4H to deploy across different systems seamlessly. 
 document:
   repo: https://github.com/tsailiming/etx-ai-poc.git
   commit: 4171b73c57667c1536d540e6ccb1d4fc39daa3ea
